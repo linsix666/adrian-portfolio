@@ -1,0 +1,852 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+  
+.welcome-section {
+    background-image: url('fundo.png');
+    background-size: cover;
+    background-position: center;
+    padding: 6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome-box {
+    background-color: white;
+    padding: 5rem 6rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1100px;
+}
+
+.welcome-box h2 {
+    font-size: 2.5rem;
+    color: #222;
+    line-height: 1.4;
+    font-family: Georgia, serif;
+}
+
+.welcome-box span {
+    display: inline;
+    font-size: inherit;
+    color: #111;
+    font-family: Georgia, serif;
+}
+
+header {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-family: Georgia, serif;
+    text-align: center;
+    position: relative;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.subtitle {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-container h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-family: Georgia, serif;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-menu li {
+    margin: 20px 0;
+}
+
+nav, .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: Georgia, serif;
+}
+
+.nav-menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #1e90ff;
+}
+
+.nav-menu li a:hover::after {
+    width: 60%;
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hamburguer span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #111;
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .hamburguer {
+        display: flex;
+    }
+}
+
+.site-title {
+    margin-bottom: 0.5rem;
+    font-size: 2.3rem;
+}
+
+.about-me-section {
+    background-color: #f6f6f6;
+    padding: 4rem 2rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1 1 600px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.about-text hr {
+    width: 60px;
+    height: 4px;
+    background-color: #222;
+    border: none;
+    margin-bottom: 0 0 1.5rem 0;
+    display: block;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+    font-family: Georgia, serif;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cv-section {
+    background-color: #f6f6f6;
+    padding: 0rem 2rem 2rem;
+    margin-top: -3rem;
+}
+
+.cv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cv-text {
+    text-align: left;
+    max-width: 600px;
+    padding-top: 0rem;
+}
+
+.cv-text h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 0.3rem;
+}
+
+.cv-text hr {
+    width: 60px;
+    height: 3px;
+    background-color: #222;
+    border: none;
+    margin: 0 auto 1rem 0;
+}
+
+.cv-text p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-family: Georgia, serif;
+}
+
+.btn-cv {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-left: 2rem;
+}
+
+.btn-cv:hover {
+    background-color: #001d3a;
+}
+
+.education-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2.3rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.education-section hr {
+    width: 60px;
+    height: 3px;
+    background-color: #222;
+    border: none;
+    margin: 0 auto 2rem;
+}
+
+.education-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edu-item {
+    max-width: 240px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: Georgia, serif;
+}
+
+.edu-item h4 {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-family: Georgia, serif;
+}
+
+.edu-item h3 {
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 0.3rem;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+    font-family: Georgia, serif;
+}
+
+.edu-item p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+}
+
+.edu-logo {
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.clc-logo {
+    width: 300px;
+}
+
+.uma-logo {
+    width: 300px;
+}
+
+.iefp-logo {
+    width: 280px;
+}
+
+.ua-estga-logo {
+    width: 270px;
+}
+
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+  }  
+
+.edu-item.ua-estga-logo {
+    order: 6;
+}
+
+.speak-up-logo {
+    width: 140px;
+}
+
+.edu-item.speak-up-logo {
+    order: 6;
+}
+
+.institution,
+.course {
+    font-family: Georgia, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#experience {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+#experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+#experience h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #002244;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.experience-card {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    font-family: Georgia, serif;
+}
+
+.madeira-rent-logo {
+    width: 140px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.experience-text {
+    flex: 1;
+    font-family: Georgia, serif;
+  }
+
+.experience-date {
+    font-size: 1rem;
+    color: #002244;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #002244;
+}
+  
+.experience-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #222;
+    font-family: Georgia, serif;
+}
+
+#projects {
+    background-color: #f9f9f9;
+    padding: 80px 40px;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    position: relative;
+    font-weight: bold;
+}
+
+#projects h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+.project {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.project .logos img {
+    max-width: 100px;
+    height: auto;
+}
+
+.project-logo.left {
+    order: -1;
+}
+
+.project-logo.right {
+    order: -1;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+}
+
+.be-digital {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.be-digital-logo {
+    width: 80px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.project p {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    font-family: Georgia, serif;
+}
+
+.jose-estevao-logo {
+    max-width: 130px;
+    height: auto;
+}
+
+.grecia-logo {
+    max-width: 220px;
+    height: auto;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+#skills {
+    background-color: white;
+    padding: 80px 40px;
+    text-align: center;
+    margin-top: -3px;
+}
+
+#skills h2 {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#skills h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 40px 20px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logos div:hover {
+    transform: translateY(-5px);
+}
+
+.logos img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logos p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Montserrat, serif;
+    color: #111;
+}
+
+img[src*="canva.png"],
+img[src*="pestel.jpeg"],
+img[src*="swot.png"],
+img[src*="seo.jpg"] {
+    width: 120px;
+}
+
+img[src*="css.png"] {
+    width: 123px;
+}
+
+img[src*="powerbi.png"] {
+    width: 130px;
+}
+
+.logos-section {
+    padding-top: -3px;
+}
+
+img[src*="4p-marketing.png"] {
+    width: 133px;
+}
+
+#languages {
+    padding: 80px 20px;
+}
+
+.languages {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+}
+
+.languages li {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.languages img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.languages li span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.languages li span strong {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Georgia, serif;
+}
+
+#languages h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Georgia, serif
+}
+
+#languages h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 10px auto 30px;
+}
+
+#contact {
+    padding: 60px 0px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#contact h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 10px auto 30px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 200px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.contact-details {
+    text-align: left;
+    font-size: 17px;
+    line-height: 2;
+    max-width: 500px;
+}
+
+.contact-details strong {
+    font-size: 20px;
+    font-family: Georgia, serif;
+}
+
+.qr-code img {
+    width: 264px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.contact-details ul li {
+    white-space: nowrap;
+    line-height: 2.2;
+    list-style: none;
+}
+
+.contact-details ul li img {
+    width: 24px;
+    height: auto;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #0d0d0d;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Georgia, serif;
+    letter-spacing: 0.5px;
+}
+
+.footer-name {
+    font-size: 21px;
+}
+
+.footer-sub {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    padding-top: 100px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+  
+  nav.active {
+    right: 0;
+}
+  
+
+/* Ajustes adicionales para modo móvil, si los necesitas */
+@media (max-width: 768px) {
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+#typed-text {
+    font-family: Georgia, serif;
+    font-size: 2.2rem;
+    white-space: nowrap; /* ¡Esto mantiene todo en una línea! */
+    display: inline-block;
+  }
+  
+#skills h2,
+#projects h2,       /* Si "Pilotes" está dentro de #projects */
+#languages h2,
+#contact h2 {
+    font-size: 2.5rem;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#skills h2::after,
+#projects h2::after,
+#languages h2::after,
+#contact h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    margin: 10px auto 0;
+}
+
+  
+
+
+
