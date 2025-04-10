@@ -846,6 +846,51 @@ nav {
     margin: 10px auto 0;
 }
 
+@media (max-width: 768px) {
+    /* Corrige el desbordamiento horizontal */
+    html, body {
+      overflow-x: hidden;
+    }
+  
+    /* Ajusta el padding y fuente del welcome box */
+    .welcome-box {
+      padding: 2rem 1.5rem;
+      font-size: 1.2rem;
+    }
+  
+    .welcome-box h2 {
+      font-size: 1.6rem;
+    }
+  
+    .welcome-box strong {
+      font-size: 2rem;
+    }
+  
+    /* Mejora el espaciado general en móviles */
+    section {
+      padding: 2rem 1rem;
+    }
+  
+    header h1 {
+      font-size: 1.4rem;
+    }
+  
+    header p.subtitle {
+      font-size: 0.9rem;
+    }
+  
+    /* Haz que el menú hamburguesa se vea bien */
+    nav.nav-menu {
+      width: 75vw;
+      padding: 2rem 1.5rem;
+    }
+  
+    /* Imágenes se adaptan al ancho */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
   
 
 
