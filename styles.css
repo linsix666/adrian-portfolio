@@ -892,6 +892,35 @@ nav {
     }
   }
   
+/* Versión móvil */
+@media (max-width: 768px) {
+  /* HEADER texto centrado */
+  .title-group h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+    .welcome-box {
+    padding: 2rem;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+  }
+
+  .welcome-box h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }
+}
 
 
 
