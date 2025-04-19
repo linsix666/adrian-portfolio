@@ -891,36 +891,57 @@ nav {
       height: auto;
     }
   }
-  
-/* Versión móvil */
+
+  /* Estilos solo para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-  /* HEADER texto centrado */
-  .title-group h1 {
-    font-size: 1.5rem;
-    text-align: center;
-    word-break: break-word;
-  }
 
-  .subtitle {
-    font-size: 0.9rem;
-    text-align: center;
-  }
-
+    header h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+  
+    header .subtitle {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      font-size: 1.8rem;
+      position: absolute;
+      right: 20px;
+      top: 25px;
+    }
+  
     .welcome-box {
-    padding: 2rem;
-    margin: 0 1rem;
-    font-size: 1.2rem;
+      width: 90%;
+      padding: 2rem;
+      font-size: 1.2rem;
+      margin: 2rem auto;
+    }
+  
+    .typing-text {
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+  
+    .typing-text strong {
+      display: block;
+      font-size: 1.8rem;
+    }
+  
+    nav.nav-menu {
+      width: 80%;
+      right: 0;
+      top: 70px;
+    }
+  
   }
+  
+  
 
-  .welcome-box h2 {
-    font-size: 1.4rem;
-    line-height: 1.4;
-  }
-
-  body, html {
-    overflow-x: hidden;
-  }
-}
+  
 
 
 
